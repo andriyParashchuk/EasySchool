@@ -1,0 +1,171 @@
+Rails:
+  Enabled: true
+Rails/OutputSafety:
+  Enabled: false
+AllCops:
+  DefaultFormatter: fuubar
+  TargetRubyVersion: 2.6.2
+
+Rails/DynamicFindBy:
+  # Problems with non ActiveRecord models
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Layout/AlignParameters:
+  Enabled: false
+Style/RescueModifier:
+  Enabled: false
+Layout/ExtraSpacing:
+  # Alignments such as the following are broken by this rule
+  # attribute :country_codes,      CountryCodeArray, default: []
+  # attribute :is_global,          Boolean
+  # attribute :device_context_ids, Array[Integer],   default: []
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: always
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+Layout/MultilineOperationIndentation:
+  Enabled: false
+Style/SingleLineMethods:
+  Enabled: false
+Layout/EmptyLineBetweenDefs:
+  AllowAdjacentOneLineDefs: true
+Style/TrailingUnderscoreVariable:
+  Enabled: false
+Style/BracesAroundHashParameters:
+  Enabled: false
+Layout/IndentHash:
+  EnforcedStyle: consistent
+Layout/IndentArray:
+  EnforcedStyle: consistent
+Style/NegatedIf:
+  Enabled: false
+Style/MultilineBlockChain:
+  Enabled: false
+Layout/CaseIndentation:
+  EnforcedStyle: end
+Style/GlobalVars:
+  Enabled: false
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+Style/Lambda:
+  Enabled: false
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+  Enabled: false
+Style/ClassVars:
+  Enabled: false
+Naming/AccessorMethodName:
+  Enabled: false
+Layout/DotPosition:
+  EnforcedStyle: leading
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+Lint/EmptyWhen:
+  Enabled: false
+Lint/AmbiguousOperator:
+  Enabled: false
+Lint/HandleExceptions:
+  # Example:
+  #   def x
+  #   rescue StoreSearch::NoResultsError
+  #   end
+  # is invalid when enabled
+  Enabled: false
+Lint/UnneededSplatExpansion:
+  # Example:
+  #   private_constant *%i[...]
+  # is invalid when enabled, but
+  #   private_constant %i[...]
+  # is not valid Ruby
+  Enabled: false
+Lint/UselessAccessModifier:
+  Enabled: false
+Metrics/ClassLength:
+  Max: 150
+  Severity: warning
+Metrics/BlockLength:
+  Enabled: false
+Metrics/LineLength:
+  Max: 121
+Metrics/MethodLength:
+  Max: 30
+Metrics/AbcSize:
+  Max: 50
+Metrics/CyclomaticComplexity:
+  Max: 7
+Documentation:
+  Enabled: false
+# TODO: Rubocop-Git does not support disabling by source code
+Rails/HasAndBelongsToMany:
+  Enabled: false
+Rails/Output:
+  Enabled: false
+Rails/TimeZone:
+  Enabled: false
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%': '[]'
+    '%w': '[]'
+    '%i': '[]'
+# Otherwise,
+# x = begin
+# rescue
+# else # Cop is not happy with that.
+# end
+Layout/ElseAlignment:
+  Enabled: false
+Style/MultilineIfModifier:
+  Enabled: false
+Layout/FirstParameterIndentation:
+  EnforcedStyle: consistent
+Layout/SpaceAroundEqualsInParameterDefault:
+  Enabled: true
+Layout/SpaceBeforeBlockBraces:
+  EnforcedStyle: space
+Naming/PredicateName:
+  Severity: warning
+Performance/TimesMap:
+  Enabled: false
+Performance/RedundantMerge:
+  MaxKeyValuePairs: 0
+Style/RedundantSelf:
+  Enabled: false
+Style/ZeroLengthPredicate:
+  Enabled: false
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+Style/IfInsideElse:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
+Layout/MultilineHashBraceLayout:
+  Enabled: false
+Style/NumericPredicate:
+  Enabled: false
+Style/TrivialAccessors:
+  Enabled: false
+Rails/SkipsModelValidations:
+  Blacklist: []
+Layout/AlignHash:
+  EnforcedColonStyle: table
+
+Rails/UnknownEnv:
+  Environments:
+    - development
+    - test
+    - production
+    - staging
+
+# NOTICE: We have metaprogramming in the app/workers/recurring/promotion_update_workers.rb Rubocop could not detect this.
+# It provides to change the proper functionality to exit from loop. Need remove after refactoring of this worker.
+Lint/NonLocalExitFromIterator:
+  Enabled: false
+
+Security/YAMLLoad:
+  Enabled: false

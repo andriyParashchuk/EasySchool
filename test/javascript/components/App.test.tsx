@@ -4,12 +4,10 @@ import { shallow } from 'enzyme'
 import { App } from '../../../app/javascript/components/App'
 
 it('Renders component with props', () => {
-  const name = "Test"
+  const name = 'Test'
 
   const component = shallow(
-    <App
-      name={name}
-    />,
+    <App name={name} />,
   )
 
   expect(component).toMatchSnapshot()

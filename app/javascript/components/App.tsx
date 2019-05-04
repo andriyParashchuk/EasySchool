@@ -8,6 +8,8 @@ interface AppProps {
 export class App extends React.Component<AppProps> {
   render() {
     const { name } = this.props
-    return <div>Hello {name}!</div>
+    return (
+      <div className="bd-title">Hello {name}!</div>
+    )
   }
 }

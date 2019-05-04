@@ -4,14 +4,11 @@
 
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
+import { App } from '../components/App'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="React" />,
+    <App name="React"/>,
     document.body.appendChild(document.createElement('div')),
   )
 })

@@ -1,20 +1,33 @@
 {
   "name": "easy_school",
   "private": true,
+  "scripts": {
+    "lint": "tslint app/**/*.{ts,tsx} test/javascript/**/*.{ts,tsx}",
+    "lint:js": "tslint app/**/*.{ts,tsx} test/javascript/**/*.{ts,tsx}",
+    "lint:fix": "tslint --fix app/**/*.{ts,tsx} test/javascript/**/*.{ts,tsx}"
+  },
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
     "@rails/webpacker": "^4.0.2",
+    "@types/react": "^16.8.14",
+    "@types/react-dom": "^16.8.4",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "turbolinks": "^5.2.0"
+    "ts-loader": "^5.4.4",
+    "turbolinks": "^5.2.0",
+    "typescript": "^3.4.5"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "tslint": "^5.16.0",
+    "tslint-consistent-codestyle": "^1.15.1",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^4.0.0",
     "webpack-dev-server": "^3.2.1"
   }
 }

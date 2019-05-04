@@ -8,10 +8,26 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "target": "es5",
-    "jsx": "react"
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@Types": ["app/javascript/types"],
+      "@Utils/*": ["app/javascript/utils/*"],
+      "@Components/*": ["app/javascript/components/*"],
+      "@Containers/*": ["app/javascript/containers/*"],
+      "@App/*": ["app/javascript/*"]
+    },
+    "noImplicitAny": false, // TODO: Enable this option
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": false,  // TODO: Enable this option
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": false  // TODO: Enable this option
   },
   "exclude": [
-    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.test.tsx",
     "node_modules",
     "vendor",
     "public"

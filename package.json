@@ -1,6 +1,11 @@
 {
   "name": "easy_school",
   "private": true,
+  "scripts": {
+    "lint": "tslint app/**/*.{ts,tsx} test/javascript/**/*.{ts,tsx}",
+    "lint:js": "tslint app/**/*.{ts,tsx} test/javascript/**/*.{ts,tsx}",
+    "lint:fix": "tslint --fix app/**/*.{ts,tsx} test/javascript/**/*.{ts,tsx}"
+  },
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
     "@rails/actioncable": "^6.0.0-alpha",
@@ -19,6 +24,10 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "tslint": "^5.16.0",
+    "tslint-consistent-codestyle": "^1.15.1",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^4.0.0",
     "webpack-dev-server": "^3.2.1"
   }
 }

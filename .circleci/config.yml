@@ -123,4 +123,4 @@ workflows:
             branches:
               ignore: /^(master|production|staging)$/
           requires:
-- test
+            - test
